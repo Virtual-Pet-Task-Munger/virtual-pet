@@ -4,7 +4,7 @@ import { findById } from '../functions/utils.js';
 
 
 
-export function redenderPet() {
+export function renderPet() {
     const user = getCurrentUser();
 
     const id = Number(user.pet);

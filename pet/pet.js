@@ -1,12 +1,12 @@
 import { logoutUser, getCurrentUser, setUser } from '../functions/local-storage-utils.js';
-import { petInterval, redenderPet } from './render-pet.js';
+import { petInterval, renderPet } from './render-pet.js';
 
 const logoutButton = document.querySelector('#logout');
 const foodButton = document.querySelector('#food');
 const waterButton = document.querySelector('#water');
 const loveButton = document.querySelector('#love');
 
-redenderPet();
+renderPet();
 petInterval();
 
 logoutButton.addEventListener('click', () => {
