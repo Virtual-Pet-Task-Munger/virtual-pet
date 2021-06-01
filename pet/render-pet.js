@@ -1,4 +1,4 @@
-import { getCurrentUser, getUser } from '../functions/local-storage-utils.js';
+import { getCurrentUser, setUser } from '../functions/local-storage-utils.js';
 import petData from '../data/pet-data.js';
 import { findById } from '../functions/utils.js';
 
@@ -9,8 +9,6 @@ export function redenderPet() {
 
     const id = Number(user.pet);
 
-    console.log(id);
-
     const userPet = findById(petData, id);
 
     const image = document.createElement('img');
@@ -20,5 +18,15 @@ export function redenderPet() {
     image.src = userPet.gif;
 
     petDiv.append(image);
+}
 
+export function petInterval() {
+    
+    setInterval(() => {
+        const user = getCurrentUser();
+        user.food--;
+        user.water--;
+        user.love--;
+        setUser(user);}, 
+    5000);
 }
