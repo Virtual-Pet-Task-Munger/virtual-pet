@@ -1,6 +1,7 @@
 import { loginUser } from '../functions/local-storage-utils.js';
 
 const loginForm = document.querySelector('form');
+const homeButton = document.querySelector('#homepage');
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -11,6 +12,11 @@ loginForm.addEventListener('submit', (e) => {
 
     window.location.href = '../pet/index.html';
 });
+
+homeButton.addEventListener('click', () => {
+    window.location.href = '../index.html';
+});
+
 
 
 
