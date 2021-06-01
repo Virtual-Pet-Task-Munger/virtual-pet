@@ -43,7 +43,7 @@ export function getCurrentUser() {
 
 export function logoutUser() {
     localStorage.setItem(CURRENT, []);
-    window.location.href = '../sign-up/index.html';
+    window.location.href = '../index.html';
 }
 
 export function loginUser(username, password) {
