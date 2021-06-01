@@ -8,9 +8,7 @@ loginForm.addEventListener('submit', (e) => {
 
     const userInfo = new FormData(loginForm);
 
-    loginUser(userInfo.get('username'), userInfo.get('password'), userInfo.get('petname'), userInfo.get('pet'));
-
-    window.location.href = '../pet/index.html';
+    loginUser(userInfo.get('username'), userInfo.get('password'), userInfo.get('petname'), userInfo.get('pet'));''
 });
 
 homeButton.addEventListener('click', () => {
