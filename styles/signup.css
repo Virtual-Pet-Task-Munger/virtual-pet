@@ -11,12 +11,14 @@ input:checked + img {
 .input {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    
 }
 
 input {
     margin: .5%;
-    border-radius: 25%;
+    border-radius: 15px;
     font-size: 1rem;
     font-family:  'Press Start 2P', cursive;
     padding: .5%
@@ -51,5 +53,13 @@ section {
     border: dotted 2rem var(--color4);
 }
 
+.name-pet {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
 
+h2 {
+    text-align: center;
+}
 

@@ -15,25 +15,32 @@
     <section>
         <form>
             <div class= "input">
+                
                 <input type="text" name="username" placeholder="Username">
+            
                 <input type="password" name="password" placeholder="Password">
-                <input type="text" name="petname" placeholder="Name your Alchegotchi!">
-        </div>
-        <div class= "selectors">
+            
+                
+            </div>
+            <h2>Select Your Pet Below: click your choice!</h2>
+            <div class= "selectors">
                 <label for="1">
                     <input value="1" id="1" class= "pet-button" type="radio" name="pet">
                     <img src= "../assets/green-1.png"/>
                 </label>
-
+                
                 <label for="2">
-                    <input value="2" id="2" class= "pet-button" type="radio" name="pet">
+                    <input checked= "checked" value="2" id="2" class= "pet-button" type="radio" name="pet">
                     <img src= "../assets/orange-1.png"/>
                 </label>
-
+                
                 <label for="3">
                     <input value="3" id="3" class= "pet-button" type="radio" name="pet" placeholder="purple">
                     <img src= "../assets/purple-1.png"/>
                 </label>
+            </div>
+            <div class="name-pet">
+                <input type="text" name="petname" placeholder="Name your Alchegotchi!">
             </div>
             <div class= "create-button">
                 <button id="user" >Create!</button>
