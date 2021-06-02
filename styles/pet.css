@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.pet-image {
+    display: flex;
+    justify-content: center;
+}
+.egg {
+    background-color: var(--color3);
+    border-radius: 50%;
+    width: 50rem;
+    height: 50rem;
+    border: outset 1rem var(--color2);
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    margin: 5%;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 2%;
+    border: outset 1rem var(--color2);
+    background-color: var(--color4);
+}
+
+#all-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
