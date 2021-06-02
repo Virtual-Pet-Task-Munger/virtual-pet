@@ -1,9 +1,7 @@
-import petData from '../data/pet-data.js'; 
-
 
 const CURRENT = 'CURRENT';
 
-
+//creates new user object in local storage, logs new user in as current user
 export function createUser(username, password, petname, pet) {
 
     if (localStorage.getItem(username)) {
@@ -23,29 +21,33 @@ export function createUser(username, password, petname, pet) {
     }
 }
 
+//sets user in local storage
 export function setUser(user) {
     const stringyUser = JSON.stringify(user);
     localStorage.setItem(user.username, stringyUser);
 }
 
+//gets user from local storage
 export function getUser(username) {
     const stringyUser = localStorage.getItem(username);
     const parsedUser = JSON.parse(stringyUser);
     return parsedUser;
 }
 
+//gets current user from local storage
 export function getCurrentUser() {
     const currentUser = localStorage.getItem(CURRENT);
     const user = getUser(currentUser);
     return user;
 }
 
-
+//logs out current user, redirects to home page
 export function logoutUser() {
     localStorage.setItem(CURRENT, []);
     window.location.href = '../index.html';
 }
 
+//logs in user provided user name and password match an existing user in local storage
 export function loginUser(username, password) {
     const user = getUser(username);
     if (user) {
