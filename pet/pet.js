@@ -1,4 +1,5 @@
 import { logoutUser, getCurrentUser, setUser } from '../functions/local-storage-utils.js';
+import { evaluateFood, evaluateWater, evaluateLove, conveyStats } from './conveyance.js';
 import { petInterval, renderPet } from './render-pet.js';
 
 //grabs button elements from the DOM to use in click events
@@ -12,6 +13,10 @@ renderPet();
 
 //decrements pet stats in local storage
 petInterval();
+
+const user = getCurrentUser();
+conveyStats(user);
+
 
 //logs out current user, redirects to home page
 logoutButton.addEventListener('click', () => {
@@ -37,4 +42,5 @@ loveButton.addEventListener('click', () => {
     const user = getCurrentUser();
     user.love++;
     setUser(user);
+    conveyStats(user);
 });
