@@ -1,0 +1,8 @@
+.pet-button {
+    display: none;
+}
+
+input:checked + img {
+    border: 3px solid blueviolet;
+    background-color: rgba(137, 43, 226, 0.39);
+}
