@@ -45,6 +45,11 @@ input {
     background-color: var(--color3);
 }
 
+section {
+    background-color: var(--color5);
+    border-radius: 30%;
+    border: dotted 2rem var(--color4);
+}
 
 
 
