@@ -11,6 +11,7 @@ input:checked + img {
 .input {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 input {
@@ -24,11 +25,13 @@ input {
 .selectors {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .create-button {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 5%
 }
 
