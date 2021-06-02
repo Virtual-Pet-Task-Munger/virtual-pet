@@ -13,6 +13,7 @@ input:checked + img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 5%;
     
 }
 
@@ -34,7 +35,7 @@ input {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 5%
+    margin: 2%
 }
 
 #user {
