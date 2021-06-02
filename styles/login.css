@@ -55,7 +55,7 @@ button {
     height: 15rem;
     width: 10rem;
     border: outset 2rem var(--color2);
-    background-color: var(--color3);
+    background-color: var(--color4);
 }
 
 #homepage {
