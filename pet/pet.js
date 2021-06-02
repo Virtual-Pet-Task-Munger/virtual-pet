@@ -1,5 +1,5 @@
 import { logoutUser, getCurrentUser, setUser } from '../functions/local-storage-utils.js';
-import { evaluateFood, evaluateWater, evaluateLove, conveyStats } from './conveyance.js';
+import { conveyStats } from './conveyance.js';
 import { petInterval, renderPet } from './render-pet.js';
 
 //grabs button elements from the DOM to use in click events
@@ -28,6 +28,7 @@ foodButton.addEventListener('click', () => {
     const user = getCurrentUser();
     user.food++;
     setUser(user);
+    conveyStats(user);
 });
 
 //increments water stat on click
@@ -35,6 +36,7 @@ waterButton.addEventListener('click', () => {
     const user = getCurrentUser();
     user.water++;
     setUser(user);
+    conveyStats(user);
 });
 
 //increments love stat on click

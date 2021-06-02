@@ -1,10 +1,13 @@
 
 export function evaluateFood(user){
-    if (user.food > 10) {
+    if (user.food > 15) {
         return 'full';
     }
-    if (user.food > 0) {
+    if (user.food > 7) {
         return 'hungry';
+    }
+    if (user.food > 0) {
+        return 'famished';
     }
     return 'starving';
 }
@@ -36,9 +39,13 @@ export function conveyStats(user) {
     let food = evaluateFood(user);
     let water = evaluateWater(user);
     let love = evaluateLove(user);
-    //console.log(love);
+
+    const image3 = document.querySelector('#food-stat');
+    image3.src = `../assets/${food}.png`;
+
+    const image2 = document.querySelector('#water-stat');
+    image2.src = `../assets/${water}.png`;
+
     const image = document.querySelector('#love-stat');
     image.src = `../assets/${love}.png`;
-
-
 }
