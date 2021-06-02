@@ -5,23 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/login.css">
     <title>Alchegotchi Login</title>
 </head>
 
 <body>
-    <form action="submit">
-        <input type="text" name="username"  placeholder="username">
-        <input type="password" name="password" placeholder="password">
-        <br>
-        <button id="login">Login</button>
-    </form>
 
-    <button id="homepage">Homepage</button>
+    <div class= "all-of-it">
+        <div class= "login-form">
+            <form action="submit">
+                <input type="text" name="username"  placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                <br>
+                <div class="login-button">
+                    <button id="login">Login</button>
+                </div>
+            </form>
+        </div>
 
-
+        <div class= "home-button">
+            <button id="homepage">Homepage</button>
+        </div>
+    </div>  
+    <footer>
+        <img src= "../assets/green.gif"/>
+        <img src= "../assets/orange.gif"/>
+        <img src= '../assets/purple.gif'/>
+    </footer>
     <script type="module" src="./login.js"></script>
 </body>
 
