@@ -1,6 +1,7 @@
 import { getCurrentUser, setUser } from '../functions/local-storage-utils.js';
 import petData from '../data/pet-data.js';
 import { findById } from '../functions/utils.js';
+import { conveyStats } from './conveyance.js';
 
 
 //renders the pet gif on the pet page by combining current user data with pet data from data file
@@ -29,6 +30,8 @@ export function petInterval() {
         user.food--;
         user.water--;
         user.love--;
-        setUser(user);}, 
+        setUser(user);
+        conveyStats(user);
+    }, 
     5000);
 }
