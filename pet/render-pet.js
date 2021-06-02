@@ -3,7 +3,7 @@ import petData from '../data/pet-data.js';
 import { findById } from '../functions/utils.js';
 
 
-
+//renders the pet gif on the pet page by combining current user data with pet data from data file
 export function renderPet() {
     const user = getCurrentUser();
 
@@ -20,6 +20,8 @@ export function renderPet() {
     petDiv.append(image);
 }
 
+
+//decrements the food, water, and love amounts in local storage at a regular interval
 export function petInterval() {
     
     setInterval(() => {
