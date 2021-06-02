@@ -33,5 +33,5 @@ export function petInterval() {
         setUser(user);
         conveyStats(user);
     }, 
-    5000);
+    10000);
 }
