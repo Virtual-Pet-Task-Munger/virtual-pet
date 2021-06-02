@@ -1,0 +1,68 @@
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.all-of-it {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color5);
+    border-radius: 40%;
+    border: dotted 2rem var(--color4);
+}
+
+input {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 5%;
+    border-radius: 15px;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    margin: 5%;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+}
+
+#login {
+    border-radius: 50%;
+    font-size: 1rem;
+    height: 15rem;
+    width: 10rem;
+    border: outset 2rem var(--color2);
+    background-color: var(--color4);
+}
+
+#homepage {
+    border-radius: 15px;
+    font-size: 1.5rem;
+    padding: 5%;
+    border: outset 1rem var(--color2);
+    background-color: var(--color4);
+}
+
