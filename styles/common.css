@@ -1,0 +1,23 @@
+
+
+body, html {
+    --color1: #85a9ffff;
+    --color2: #f585ffff;
+    --color3: #f5a3c0ff;
+    --color4: #edf5a3ff;
+    --color5: #91ebf3ff;
+
+    font-family: 'Press Start 2P', cursive;
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color1);
+}
+
+
+* {
+    box-sizing:border-box;
+}
+
