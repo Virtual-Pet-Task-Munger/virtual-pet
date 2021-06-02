@@ -6,3 +6,35 @@ input:checked + img {
     border: 3px solid blueviolet;
     background-color: rgba(137, 43, 226, 0.39);
 }
+
+.input {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: .5%;
+    border-radius: 25%;
+    font-size: 1.5rem;
+}
+
+.selectors {
+    display: flex;
+    justify-content: center;
+}
+
+.create-button {
+    display: flex;
+    justify-content: center;
+    margin: 5%
+}
+
+#user {
+    border-radius: 50%;
+    font-size: 1.5rem;
+    height: 25rem;
+    width: 15rem;
+    border: outset 2rem var(--color2);
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--color3);
+}
