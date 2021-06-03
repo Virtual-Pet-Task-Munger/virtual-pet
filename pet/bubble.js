@@ -27,12 +27,12 @@ function bubbleLove(user) {
     if (user.love > 20) {
         return 'boundaries';
     }
-    // if (user.love > 5) {
-    //     return '';
-    // }
-    // else {
-    //     return '';
-    // }
+    if (user.love > 5) {
+        return 'loved';
+    }
+    else {
+        return 'talk';
+    }
 }
 
 export function renderFoodBubbles(user) {

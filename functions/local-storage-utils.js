@@ -11,9 +11,9 @@ export function createUser(username, password, petname, pet) {
             username: username,
             password: password,
             petname: petname,
-            love: 5,
-            food: 5,
-            water: 5,
+            love: 10,
+            food: 10,
+            water: 10,
             pet: pet
         };
         setUser(user);
