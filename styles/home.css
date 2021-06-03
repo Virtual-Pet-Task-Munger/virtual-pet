@@ -1,12 +1,17 @@
 /* add home page styles here */
 
-
+main {
+    background-color: #85a9ffff;
+    opacity: 80%;
+}
 
 * {
     text-align: center;
+    margin:0;
 }
 
 h1 {
+    padding-top: .5em;
     padding-bottom: 1em;
     font-size: 2.1em;
     max-width: 100%;
@@ -18,3 +23,48 @@ h2 {
 p {
     line-height: 130%;
 }
+
+body {
+    background-image: url('../assets/roseegg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:0;
+}
+
+#upper_right {
+    width: 125px; height: 125px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-repeat: no-repeat;
+    transform: rotate(220deg);
+    }
+    
+#lower_left {
+    width: 125px; height: 125px;
+    position: absolute;
+    bottom: 2.5%; 
+    left: 2.5%;
+    transform: rotate(30deg);
+    background-repeat: no-repeat;
+    
+    }
+    
+#lower_right {
+    width: 125px; height: 125px;
+    bottom: 2.5%;
+    right: 2.5%;
+    position: absolute;
+    transform: rotate(-30deg);
+    background-repeat: no-repeat;
+    
+    }
+
+    #footer {
+        overflow:hidden;
+        position:relative;
+        margin-top:-4em;
+        /* negative value of footer height */
+        height:4em;
+        clear:both;
+    }
