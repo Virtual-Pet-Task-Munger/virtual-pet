@@ -1,4 +1,5 @@
 import { logoutUser, getCurrentUser, setUser } from '../functions/local-storage-utils.js';
+import { renderBubbles } from './bubble.js';
 import { conveyStats } from './conveyance.js';
 import { petInterval, renderPet } from './render-pet.js';
 
@@ -29,6 +30,7 @@ foodButton.addEventListener('click', () => {
     user.food++;
     setUser(user);
     conveyStats(user);
+    renderBubbles(user);
 });
 
 //increments water stat on click
