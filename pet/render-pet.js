@@ -33,6 +33,16 @@ export function petInterval() {
         user.love--;
         setUser(user);
         conveyStats(user);
+        gameOver(user);
     }, 
     5000);
+}
+
+export function gameOver(user) {
+    if (user.food, user.water, user.love <= -20) {
+        localStorage.clear();
+
+        window.location.href = '../game-over/index.html';
+
+    }
 }
