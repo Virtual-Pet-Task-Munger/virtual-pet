@@ -1,5 +1,15 @@
 
-# Alchemeo Pets/ Alchegotchi
+#  Alchegotchi
+
+## Development Team
+  - Madden Lockin
+  - Peter Montano 
+  - Kubisiak
+  - Ben Francka
+  - Special Thanks for Kory Bingaman Francka for contributing artwork for the virtual pets.
+
+## Project Description
+  - Alchegotchi is an interactive virtual pet app, styled to bring back memories of the Tomagotchi toy from the late nineties. The app allows the user to create an account and choose between three different pets to feed, water, and give attention to. It is a feel good app that can be enjoyed by nostalgic adults and kids alike.
 
 ## User Stories
   - As a nostalgic millenial I want a web app that simiulates my childhood toy. 
