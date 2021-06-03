@@ -11,12 +11,16 @@ const loveButton = document.querySelector('#love');
 
 //renders pet on the page
 renderPet();
+
+//renders blank gif as a placeholder for speech bubbles
 blankBubble();
 
 //decrements pet stats in local storage
 petInterval();
 
 const user = getCurrentUser();
+
+//updates the image displays based on local storage state
 conveyStats(user);
 
 
@@ -25,7 +29,7 @@ logoutButton.addEventListener('click', () => {
     logoutUser();
 });
 
-//increments food stat on click
+//increments food stat on click, displays relevant information
 foodButton.addEventListener('click', () => {
     const user = getCurrentUser();
     user.food++;
@@ -33,10 +37,9 @@ foodButton.addEventListener('click', () => {
     conveyStats(user);
     renderFoodBubbles(user);
     gameOver(user);
-    //console.log(renderBubbles(user))
 });
 
-//increments water stat on click
+//increments water stat on click, displays relevant information
 waterButton.addEventListener('click', () => {
     const user = getCurrentUser();
     user.water++;
@@ -46,7 +49,7 @@ waterButton.addEventListener('click', () => {
     gameOver(user);
 });
 
-//increments love stat on click
+//increments love stat on click, displays relevant information
 loveButton.addEventListener('click', () => {
     const user = getCurrentUser();
     user.love++;

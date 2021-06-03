@@ -1,4 +1,4 @@
-
+//puts conditional values on food state for use in bubble display
 function bubbleFood(user) {
     if (user.food > 20) {
         return 'too-much';
@@ -11,6 +11,7 @@ function bubbleFood(user) {
     }
 }
 
+//puts conditional values on water state for use in bubble display
 function bubbleWater(user) {
     if (user.water > 20) {
         return 'too-much';
@@ -23,6 +24,7 @@ function bubbleWater(user) {
     }
 }
 
+//puts conditional values on love state for use in bubble display
 function bubbleLove(user) {
     if (user.love > 20) {
         return 'boundaries';
@@ -35,6 +37,7 @@ function bubbleLove(user) {
     }
 }
 
+//displays speech bubbles based on food state
 export function renderFoodBubbles(user) {
     let food = bubbleFood(user);
     
@@ -43,6 +46,7 @@ export function renderFoodBubbles(user) {
 
 }
 
+//displays speech bubbles based on water state
 export function renderWaterBubbles(user) {
     let water = bubbleWater(user);
 
@@ -51,6 +55,7 @@ export function renderWaterBubbles(user) {
 
 }
 
+//displays speech bubbles based on love state
 export function renderLoveBubbles(user) {
     let love = bubbleLove(user);
 
@@ -58,6 +63,7 @@ export function renderLoveBubbles(user) {
     gif.src = `../assets/bubbles/${love}.gif`;
 }
 
+//renders a blank speech bubble as a placeholder on page load
 export function blankBubble() {
     const gif = document.querySelector('#food-bubble');
     gif.src = '../assets/bubbles/blank.gif';
