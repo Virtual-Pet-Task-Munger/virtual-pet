@@ -1,7 +1,7 @@
 
 const CURRENT = 'CURRENT';
 
-//creates new user object in local storage, logs new user in as current user
+//creates new user object in local storage, logs new user in as current user, initializes state
 export function createUser(username, password, petname, pet) {
 
     if (localStorage.getItem(username)) {

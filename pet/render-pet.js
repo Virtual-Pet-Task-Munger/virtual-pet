@@ -38,8 +38,9 @@ export function petInterval() {
     5000);
 }
 
+//on meeting conditions, sends user to game over screen,  clears local storage
 export function gameOver(user) {
-    if (user.food, user.water, user.love <= -20) {
+    if (user.food, user.water, user.love <= -10) {
         localStorage.clear();
 
         window.location.href = '../game-over/index.html';

@@ -1,4 +1,4 @@
-
+//puts conditional values on food state
 export function evaluateFood(user){
     if (user.food > 15) {
         return 'full';
@@ -12,6 +12,7 @@ export function evaluateFood(user){
     return 'starving';
 }
 
+//puts conditional values on water state
 export function evaluateWater(user){
     if (user.water > 15) {
         return 'hydrated';
@@ -25,6 +26,7 @@ export function evaluateWater(user){
     return 'dehydrated';
 }
 
+//puts conditional values on love state
 export function evaluateLove(user){
     if (user.love > 10) {
         return 'full-heart';
@@ -35,6 +37,7 @@ export function evaluateLove(user){
     return 'empty-heart';
 }
 
+//displays images based on conditional state values of food, water, and love
 export function conveyStats(user) {
     let food = evaluateFood(user);
     let water = evaluateWater(user);
