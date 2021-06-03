@@ -38,6 +38,10 @@ input {
     margin: 2%
 }
 
+.create-button:active {
+    transform: translateY(4px);
+}
+
 #user {
     border-radius: 50%;
     font-size: 1rem;
