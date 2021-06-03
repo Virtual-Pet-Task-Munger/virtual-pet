@@ -45,7 +45,6 @@
  
  ## Project Scope
   ### Base requirements on Miro Board: 
-
   - Signup
 
   - Login
