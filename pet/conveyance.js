@@ -27,12 +27,12 @@ export function evaluateWater(user){
 
 export function evaluateLove(user){
     if (user.love > 10) {
-        return 'happy';
+        return 'full-heart';
     }
     if (user.love > 0) {
-        return 'sad';
+        return 'half-heart';
     }
-    return 'neglected';
+    return 'empty-heart';
 }
 
 export function conveyStats(user) {
@@ -47,5 +47,5 @@ export function conveyStats(user) {
     image2.src = `../assets/stats/${water}.png`;
 
     const image = document.querySelector('#love-stat');
-    image.src = `../assets/stats/${love}.png`;
+    image.src = `../assets/stats/${love}.gif`;
 }
