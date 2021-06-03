@@ -1,5 +1,5 @@
 import { logoutUser, getCurrentUser, setUser } from '../functions/local-storage-utils.js';
-import { renderBubbles } from './bubble.js';
+import { renderFoodBubbles, renderWaterBubbles, renderLoveBubbles, blankBubble } from './bubble.js';
 import { conveyStats } from './conveyance.js';
 import { petInterval, renderPet } from './render-pet.js';
 
@@ -11,6 +11,7 @@ const loveButton = document.querySelector('#love');
 
 //renders pet on the page
 renderPet();
+blankBubble();
 
 //decrements pet stats in local storage
 petInterval();
@@ -30,7 +31,8 @@ foodButton.addEventListener('click', () => {
     user.food++;
     setUser(user);
     conveyStats(user);
-    renderBubbles(user);
+    renderFoodBubbles(user);
+    //console.log(renderBubbles(user))
 });
 
 //increments water stat on click
@@ -39,6 +41,7 @@ waterButton.addEventListener('click', () => {
     user.water++;
     setUser(user);
     conveyStats(user);
+    renderWaterBubbles(user);
 });
 
 //increments love stat on click
@@ -47,4 +50,6 @@ loveButton.addEventListener('click', () => {
     user.love++;
     setUser(user);
     conveyStats(user);
+    renderLoveBubbles(user);
 });
+

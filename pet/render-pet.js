@@ -19,6 +19,7 @@ export function renderPet() {
     image.src = userPet.gif;
 
     petDiv.append(image);
+    
 }
 
 
