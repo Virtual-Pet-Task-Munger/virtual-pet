@@ -41,11 +41,11 @@ export function conveyStats(user) {
     let love = evaluateLove(user);
 
     const image3 = document.querySelector('#food-stat');
-    image3.src = `../assets/${food}.png`;
+    image3.src = `../assets/stats/${food}.png`;
 
     const image2 = document.querySelector('#water-stat');
-    image2.src = `../assets/${water}.png`;
+    image2.src = `../assets/stats/${water}.png`;
 
     const image = document.querySelector('#love-stat');
-    image.src = `../assets/${love}.png`;
+    image.src = `../assets/stats/${love}.png`;
 }
