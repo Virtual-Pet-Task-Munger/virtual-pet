@@ -1,7 +1,7 @@
 import { logoutUser, getCurrentUser, setUser } from '../functions/local-storage-utils.js';
 import { renderFoodBubbles, renderWaterBubbles, renderLoveBubbles, blankBubble } from './bubble.js';
 import { conveyStats } from './conveyance.js';
-import { petInterval, renderPet } from './render-pet.js';
+import { gameOver, petInterval, renderPet } from './render-pet.js';
 
 //grabs button elements from the DOM to use in click events
 const logoutButton = document.querySelector('#logout');
@@ -32,6 +32,7 @@ foodButton.addEventListener('click', () => {
     setUser(user);
     conveyStats(user);
     renderFoodBubbles(user);
+    gameOver(user);
     //console.log(renderBubbles(user))
 });
 
@@ -42,6 +43,7 @@ waterButton.addEventListener('click', () => {
     setUser(user);
     conveyStats(user);
     renderWaterBubbles(user);
+    gameOver(user);
 });
 
 //increments love stat on click
@@ -51,5 +53,6 @@ loveButton.addEventListener('click', () => {
     setUser(user);
     conveyStats(user);
     renderLoveBubbles(user);
+    gameOver(user);
 });
 

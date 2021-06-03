@@ -37,6 +37,7 @@ function bubbleLove(user) {
 
 export function renderFoodBubbles(user) {
     let food = bubbleFood(user);
+    
     const gif = document.querySelector('#food-bubble');
     gif.src = `../assets/bubbles/${food}.gif`;
 
