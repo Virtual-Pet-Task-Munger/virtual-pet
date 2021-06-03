@@ -19,7 +19,7 @@ export function renderPet() {
     image.src = userPet.gif;
 
     petDiv.append(image);
-    
+
 }
 
 
@@ -34,5 +34,5 @@ export function petInterval() {
         setUser(user);
         conveyStats(user);
     }, 
-    10000);
+    5000);
 }
