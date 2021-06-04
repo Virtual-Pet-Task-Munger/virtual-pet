@@ -40,7 +40,7 @@ export function petInterval() {
 
 //on meeting conditions, sends user to game over screen,  clears local storage
 export function gameOver(user) {
-    if (user.food, user.water, user.love <= -10) {
+    if (user.food, user.water, user.love <= -2) {
         localStorage.clear();
 
         window.location.href = '../game-over/index.html';

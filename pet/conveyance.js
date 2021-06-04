@@ -1,5 +1,5 @@
 //puts conditional values on food state
-export function evaluateFood(user){
+function evaluateFood(user){
     if (user.food > 15) {
         return 'full';
     }
@@ -13,7 +13,7 @@ export function evaluateFood(user){
 }
 
 //puts conditional values on water state
-export function evaluateWater(user){
+function evaluateWater(user){
     if (user.water > 15) {
         return 'hydrated';
     }
@@ -27,7 +27,7 @@ export function evaluateWater(user){
 }
 
 //puts conditional values on love state
-export function evaluateLove(user){
+function evaluateLove(user){
     if (user.love > 10) {
         return 'full-heart';
     }

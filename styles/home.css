@@ -59,12 +59,3 @@ body {
     background-repeat: no-repeat;
     
     }
-
-    #footer {
-        overflow:hidden;
-        position:relative;
-        margin-top:-4em;
-        /* negative value of footer height */
-        height:4em;
-        clear:both;
-    }
