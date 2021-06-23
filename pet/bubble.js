@@ -1,66 +1,54 @@
-//puts conditional values on food state for use in bubble display
-function bubbleFood(user) {
-    if (user.food > 20) {
-        return 'too-much';
+function bubble(user, key, stringsArray) {
+    if (user[key] > 20) {
+        return stringsArray[0];
     }
-    if (user.food > 5) {
-        return 'yum';
+    if (user[key] > 5) {
+        return stringsArray[1];
     }
     else {
-        return 'feed-me';
+        return stringsArray[2];
     }
+}
+
+//puts conditional values on food state for use in bubble display
+function bubbleFood(user) {
+    return bubble(user, 'food', ['too-much', 'yum', 'feed-me']);
 }
 
 //puts conditional values on water state for use in bubble display
 function bubbleWater(user) {
-    if (user.water > 20) {
-        return 'too-much';
-    }
-    if (user.water > 5) {
-        return 'water-yum';
-    }
-    else {
-        return 'thirsty';
-    }
+    return bubble(user, 'water', ['too-much', 'water-yum', 'thirsty']);
+
 }
 
 //puts conditional values on love state for use in bubble display
 function bubbleLove(user) {
-    if (user.love > 20) {
-        return 'boundaries';
-    }
-    if (user.love > 5) {
-        return 'loved';
-    }
-    else {
-        return 'talk';
-    }
+    return bubble(user, 'love', ['boundaries', 'loved', 'talk']);
+
+}
+
+function renderBubbles(user, callback) {
+    let item = callback(user);
+    
+    const gif = document.querySelector('#food-bubble');
+    gif.src = `../assets/bubbles/${item}.gif`;
 }
 
 //displays speech bubbles based on food state
 export function renderFoodBubbles(user) {
-    let food = bubbleFood(user);
-    
-    const gif = document.querySelector('#food-bubble');
-    gif.src = `../assets/bubbles/${food}.gif`;
+    // seems like you could just grab the user in all the functions in this file from local storage here instead of needing to remember to pass it as an argument?
 
+    return renderBubbles(user, bubbleFood);
 }
 
 //displays speech bubbles based on water state
 export function renderWaterBubbles(user) {
-    let water = bubbleWater(user);
-
-    const gif = document.querySelector('#food-bubble');
-    gif.src = `../assets/bubbles/${water}.gif`;
-
+    return renderBubbles(user, bubbleWater);
 }
 
 //displays speech bubbles based on love state
 export function renderLoveBubbles(user) {
-    let love = bubbleLove(user);
-
-    const gif = document.querySelector('#food-bubble');
-    gif.src = `../assets/bubbles/${love}.gif`;
+    return renderBubbles(user, bubbleLove);
 }
 
 //renders a blank speech bubble as a placeholder on page load
