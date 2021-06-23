@@ -18,10 +18,11 @@ blankBubble();
 //decrements pet stats in local storage
 petInterval();
 
-const user = getCurrentUser();
+// worried about the two "user" variables floating around
+const _user = getCurrentUser();
 
 //updates the image displays based on local storage state
-conveyStats(user);
+conveyStats(_user);
 
 
 //logs out current user, redirects to home page
@@ -29,33 +30,27 @@ logoutButton.addEventListener('click', () => {
     logoutUser();
 });
 
-//increments food stat on click, displays relevant information
-foodButton.addEventListener('click', () => {
+function handleClick(key, callback) {
     const user = getCurrentUser();
-    user.food++;
+    user[key]++;
     setUser(user);
     conveyStats(user);
-    renderFoodBubbles(user);
+    callback(user);
     gameOver(user);
+}
+
+//increments food stat on click, displays relevant information
+foodButton.addEventListener('click', () => {
+    handleClick('food', renderFoodBubbles);    
 });
 
 //increments water stat on click, displays relevant information
 waterButton.addEventListener('click', () => {
-    const user = getCurrentUser();
-    user.water++;
-    setUser(user);
-    conveyStats(user);
-    renderWaterBubbles(user);
-    gameOver(user);
+    handleClick('water', renderWaterBubbles);    
 });
 
 //increments love stat on click, displays relevant information
 loveButton.addEventListener('click', () => {
-    const user = getCurrentUser();
-    user.love++;
-    setUser(user);
-    conveyStats(user);
-    renderLoveBubbles(user);
-    gameOver(user);
+    handleClick('love', renderLoveBubbles);    
 });
 

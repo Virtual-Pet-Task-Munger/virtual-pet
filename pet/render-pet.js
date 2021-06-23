@@ -7,13 +7,9 @@ import { conveyStats } from './conveyance.js';
 //renders the pet gif on the pet page by combining current user data with pet data from data file
 export function renderPet() {
     const user = getCurrentUser();
-
     const id = Number(user.pet);
-
     const userPet = findById(petData, id);
-
     const image = document.createElement('img');
-
     const petDiv = document.querySelector('div');
 
     image.src = userPet.gif;
@@ -24,6 +20,7 @@ export function renderPet() {
 
 
 //decrements the food, water, and love amounts in local storage at a regular interval
+// nice function!
 export function petInterval() {
     
     setInterval(() => {
@@ -40,6 +37,7 @@ export function petInterval() {
 
 //on meeting conditions, sends user to game over screen,  clears local storage
 export function gameOver(user) {
+    // seems like you could just grab the user from local storage here instead of needing to pass it as an argument?
     if (user.food <= -2 || user.water <= -2 || user.love <= -2) {
         localStorage.clear();
 

@@ -1,20 +1,21 @@
 export default [
     {
         id: 1,
-        gif: '../assets/green.gif',
-        image_1: '../assets/green-1.png',
-        image_2: '../assets/green-2.png'
+        // would be more flexible to manage the exact path elsewhere, that way you can change the location of the images/this file later and not have to update the data
+        gif: 'green.gif',
+        image_1: 'green-1.png',
+        image_2: 'green-2.png'
     },
     {
         id: 2,
-        gif: '../assets/orange.gif',
-        image_1: '../assets/orange-1.png',
-        image_2: '../assets/orange-2.png'
+        gif: 'orange.gif',
+        image_1: 'orange-1.png',
+        image_2: 'orange-2.png'
     },
     {
         id: 3,
-        gif: '../assets/purple.gif',
-        image_1: '../assets/purple-1.png',
-        image_2: '../assets/purple-2.png'
+        gif: 'purple.gif',
+        image_1: 'purple-1.png',
+        image_2: 'purple-2.png'
     }
 ];
